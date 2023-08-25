@@ -16,7 +16,7 @@ const parentTop2 = document.getElementById("parent-top2")
 const parentTop3 = document.getElementById("parent-top3")
 
 function toggleMenu() {
-    if (pizzaMain.children.length < 1 ) {
+    if (pizzaMain.children.length < 1) {
         bases.classList.add("visible")
         topping.classList.remove("visible")
     } else {
@@ -25,7 +25,7 @@ function toggleMenu() {
         bases.classList.add("hidden")
     }
 
-    if(pizzaMain.children.length > 3){
+    if (pizzaMain.children.length > 3) {
         topping.classList.remove("visible")
         topping.classList.add("hidden")
         ready.classList.add("visible")
@@ -36,10 +36,15 @@ function toggleMenu() {
 toggleMenu()
 
 function events(ele, parentEle) {
+    let selected = ele;
     ele.addEventListener("dragstart", function (e) {
+        selected = e.target;
+        // console.log('====================================');
+        // console.log(ele);
+        // console.log('====================================');
         pizzaMain.addEventListener("drop", function (e) {
             // console.log(e.target)
-            pizzaMain.appendChild(ele)
+            pizzaMain.appendChild(selected)
             parentEle.classList.add("empty")
             pizzaMain.classList.add("empty")
             setTimeout(() => {
@@ -49,6 +54,9 @@ function events(ele, parentEle) {
         })
         pizzaMain.addEventListener("dragover", function (e) {
             e.preventDefault()
+        })
+        ele.addEventListener("dragend", function (e) {
+            selected = null;
         })
     })
 }
