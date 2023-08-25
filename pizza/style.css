@@ -31,6 +31,10 @@ header {
     text-decoration: none;
 }
 
+.footer{
+    position: absolute;
+}
+
 main {
     position: relative;
 }
@@ -57,7 +61,7 @@ main {
     border-radius: 20px;
     padding: 1rem;
     justify-content: center;
-    width: 50%;
+    width: 700px;
     gap: 2rem;
     flex-direction: column;
 }
@@ -77,6 +81,8 @@ main {
 
 .container2 {
     position: relative;
+    width: 90vw;
+    margin: auto;
 }
 
 .list {
@@ -98,8 +104,9 @@ main {
 .items {
     display: flex;
     gap: 2rem;
-    padding: 1rem 3rem;
     text-align: center;
+    width: 90%;
+    margin: auto;
 }
 
 .items .item {
@@ -212,5 +219,15 @@ img {
 
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width:800px) {
+    .container1{
+        width: 90%;
+    }
+    .img-container{
+        width: 100px;
+        height: 100px;
     }
 }
