@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav-items">
+                <span class="brand"><a href="">Pizza Makers</a></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-div">
+            <div class="container1">
+                <p><b>YOUR PIZZA</b></p>
+                <div id="pizza-main" class="pizza"></div>
+            </div>
+            <div class="container2">
+                <div id="ready" class="list">
+                    <h1>WOOHOO YOUR PIZZA <br>
+                        IS READY!!!</h1>
+                    <a href="">Customize another Pizza</a>
+                </div>
+                <div id="toppings" class="list">
+                    <h1>Pizza Toppings</h1>
+                    <div class="items">
+                        <div class="item">
+                            <p>Pepperonie</p>
+                            <div id="parent-top1" class="img-container">
+                                <img id="top1" src="./assets/PizzaPep.webp" draggable="true" alt="Pepperonie">
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <p>Black Olives</p>
+                            <div id="parent-top2" class="img-container">
+                                <img id="top2" src="./assets/blackOlives.webp" draggable="true" alt="blackOlives">
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <p>Mushroom</p>
+                            <div id="parent-top3" class="img-container">
+                                <img id="top3" src="./assets/mush.webp" draggable="true" alt="Mushroom">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="bases" class="list">
+                    <h1>Pizza Base</h1>
+                    <div class="items">
+
+                        <div class="item">
+                            <p>pan base</p>
+                            <div id="parent-base1" class="img-container">
+                                <img id="base1" src="./assets/Pizza1.webp" draggable="true" alt="base1">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>pan base</p>
+                            <div id="parent-base2" class="img-container">
+                                <img id="base2" src="./assets/Pizza2.webp" draggable="true" alt="base2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
